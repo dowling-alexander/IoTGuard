@@ -2,7 +2,7 @@ Below is an outline for a masters project im reviewing for syber security. The o
 
 Intended Structure:
 /IoTGuard/
-├── config/
+├── config/ 
 │   ├── iotguard.conf
 │   ├── logstash.conf
 │   └── elasticsearch.yml
