@@ -6,7 +6,7 @@ import os
 
 def main():
     #parser object
-    parser = argparse.ArgumentParser(description="Welcome to IoT Guard, an IDS/IPS tool designed for IoT devices. -h for available commands")
+    parser = argparse.ArgumentParser(description="Welcome to IoT Guard, an IDS/IPS tool designed for IoT devices")
 
     
     parser.add_argument("-w", "--watch", type = str, nargs = 1,
