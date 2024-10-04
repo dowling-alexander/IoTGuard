@@ -1,0 +1,8 @@
+Help Contents
+
+===================================>Modes<==================================
+-watch    displays traffic in generic configuration
+-log      logs traffic in generic format
+-dome     deploys IDS/IPS rules based in config file
+
+================================>Additional<================================
