@@ -1,8 +1,10 @@
-import scapy
+from scapy.all import sniff
+#look at alternative to keyboard, reduce imports.
 import keyboard
 
 # Define a callback function to process packets
 def packet_callback(packet):
+    #this is a basic summary, look at how to provide more details back to the user with packet.show and packet.hexdump.
     print(packet.summary())
 
 # Function to start sniffing packets
