@@ -3,7 +3,7 @@
 import argparse
 import os
 import sys
-
+from vigilance import start_sniffing
 
 # need to support three modes. in the meantime when a mode is requested print I'm in development
 
@@ -30,6 +30,10 @@ def main():
     if not any(vars(args).values()):
         parser.print_help()
         sys.exit(0)
+
+    if args.watch is not None:
+        print("Traffic Incoming")
+        start_sniffing()
 
 
 if __name__ == "__main__":
