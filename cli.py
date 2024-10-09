@@ -32,8 +32,14 @@ def main():
         sys.exit(0)
 
     if args.watch is not None:
+
         print("Traffic Incoming")
-        start_sniffing()
+        try:
+            while True:
+                start_sniffing()
+        except KeyboardInterrupt:
+            sys.exit(0)
+
 
 
 if __name__ == "__main__":
