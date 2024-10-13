@@ -24,23 +24,39 @@ def main():
                         metavar="enables_rules", default=None,
                         help="Enables the actual IDS/IPS rules")
 
+    parser.add_argument("-I","--interfaace",type=str, nargs="?",
+                        metavar="searches_for_interfaces", default=None,
+                        help="Will list the available interfaces")
+
+
     args = parser.parse_args()
 
+    print(f"Args received: {vars(args)}")
     # Check if any arguments were provided
     if not any(vars(args).values()):
         parser.print_help()
         sys.exit(0)
 
-    if args.watch is not None:
-
+    if args.watch:
         print("Traffic Incoming")
         try:
             while True:
-                start_sniffing()
+                start_sniffing(args.watch)
         except KeyboardInterrupt:
+            print("Exited gracefully")
             sys.exit(0)
 
+    elif args.log:
+        print("Logging Traffic")
+        print("I'm in development")
 
+    elif args.dome:
+        print("Enabling IDS/IPS Rules")
+        print("I'm in development")
+
+    elif args.interface:
+        print("Please See Active Interfaces")
+        print("Im In Development")
 
 if __name__ == "__main__":
     # calling the main function
