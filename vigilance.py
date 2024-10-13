@@ -7,10 +7,12 @@ def packet_callback(packet):
     print(packet.summary())
 
 # Function to start sniffing packets
-def start_sniffing():
+def start_sniffing(iface_input):
       #Note only capture a packet and print before we grab the next, can also specify filter type.  filter='tcp'
       #need to link these settings with a config file.
-    sniff(iface="eth0", prn=packet_callback, count=1)
+    #while True:
+        sniff(iface=iface_input, prn=packet_callback, count=1)
 
-# Start the sniffing process
-start_sniffing()
+
+
+
