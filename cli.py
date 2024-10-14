@@ -4,6 +4,7 @@ import argparse
 import os
 import sys
 from vigilance import start_sniffing
+from kataskopos import get_active_interfaces
 
 # need to support three modes. in the meantime when a mode is requested print I'm in development
 
@@ -24,7 +25,7 @@ def main():
                         metavar="enables_rules", default=None,
                         help="Enables the actual IDS/IPS rules")
 
-    parser.add_argument("-I","--interfaace",type=str, nargs="?",
+    parser.add_argument("-I","--interface",type=str, nargs="?",
                         metavar="searches_for_interfaces", default=None,
                         help="Will list the available interfaces")
 
@@ -49,14 +50,18 @@ def main():
     elif args.log:
         print("Logging Traffic")
         print("I'm in development")
+        sys.exit(0)
 
     elif args.dome:
         print("Enabling IDS/IPS Rules")
         print("I'm in development")
-
+        sys.exit(0)
+    
     elif args.interface:
         print("Please See Active Interfaces")
+        get_active_interfaces()
         print("Im In Development")
+        sys.exit(0)
 
 if __name__ == "__main__":
     # calling the main function
