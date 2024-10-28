@@ -42,3 +42,5 @@ Wireshark for packet analysis.
 Elasticsearch, Logstash, Kibana (ELK Stack) for log management and visualization.
 Communication Protocols:
 MQTT or CoAP for IoT device communication.
+
+Will resume work on this mid November, currently studying for exams and CPTS
