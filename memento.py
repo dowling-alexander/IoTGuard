@@ -3,5 +3,5 @@ from scapy.all import sniff, wrpcap
 
 def log_packets(filename, packets):
   full_filename=f"{filename}.pcap"
-  wrpcap('packets.pcap', packets,append=true)
+  wrpcap(full_filename, packets,append=true)
   
