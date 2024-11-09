@@ -50,7 +50,12 @@ def main():
     elif args.log:
         print("Logging Traffic")
         print("I'm in development")
-        sys.exit(0)
+        try:
+            while True:
+                start_logging(args.log)
+        except KeyboardInterrupt:
+            print("Exited gracefully")
+            sys.exit(0)
 
     elif args.dome:
         print("Enabling IDS/IPS Rules")
